@@ -1,8 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { Button } from '../components/ui/Button';
 import { CalendarCheck, ArrowRight } from 'lucide-react';
+
+const ScrollLink = Link as any;
 
 export const Hero = () => {
   return (
@@ -37,18 +38,18 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="appointment" smooth={true} offset={-80}>
+            <ScrollLink to="appointment" smooth={true} offset={-80}>
               <Button variant="primary" className="w-full sm:w-auto gap-2">
                 <CalendarCheck size={20} />
                 Book Appointment
               </Button>
-            </Link>
-            <Link to="services" smooth={true} offset={-80}>
+            </ScrollLink>
+            <ScrollLink to="services" smooth={true} offset={-80}>
               <Button variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary gap-2">
                 Our Services
                 <ArrowRight size={20} />
               </Button>
-            </Link>
+            </ScrollLink>
           </div>
         </motion.div>
       </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { CLINIC_DETAILS } from '../data/clinicData';
 import { Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 

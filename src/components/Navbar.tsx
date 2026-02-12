@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLINIC_DETAILS } from '../data/clinicData';
+
+const ScrollLink = Link as any;
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +43,7 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <ScrollLink
               key={link.name}
               to={link.to}
               smooth={true}
@@ -49,7 +51,7 @@ export const Navbar = () => {
               className={`cursor-pointer font-medium hover:text-cta transition-colors ${scrolled ? 'text-primary' : 'text-white/90 hover:text-white'}`}
             >
               {link.name}
-            </Link>
+            </ScrollLink>
           ))}
           <a 
             href={`tel:${CLINIC_DETAILS.phone}`}
@@ -77,7 +79,7 @@ export const Navbar = () => {
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
-                <Link
+                <ScrollLink
                   key={link.name}
                   to={link.to}
                   smooth={true}
@@ -86,7 +88,7 @@ export const Navbar = () => {
                   className="text-primary font-medium py-2 border-b border-gray-50"
                 >
                   {link.name}
-                </Link>
+                </ScrollLink>
               ))}
               <a 
                 href={`tel:${CLINIC_DETAILS.phone}`}

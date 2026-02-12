@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { DOCTORS } from '../data/clinicData';
 import { Award, Users, GraduationCap } from 'lucide-react';

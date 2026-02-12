@@ -1,5 +1,4 @@
-import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { CLINIC_DETAILS } from '../data/clinicData';
 import { Button } from '../components/ui/Button';
 
