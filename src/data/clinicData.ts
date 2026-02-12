@@ -8,7 +8,13 @@ import {
   Syringe,
   Zap,
   Baby,
-  HeartPulse
+  HeartPulse,
+  Droplet,
+  Gem,
+  AlertCircle,
+  TrendingUp,
+  Eye,
+  Pill
 } from 'lucide-react';
 
 export const CLINIC_DETAILS = {
@@ -45,17 +51,27 @@ export const DOCTORS = [
 
 export const SERVICES = [
   { name: "Teeth Whitening", icon: Sparkles },
+  { name: "Bonding", icon: Gem },
+  { name: "Check-ups", icon: ShieldCheck },
+  { name: "Cosmetic Procedures", icon: Sparkles },
   { name: "Dental Implants", icon: Syringe },
-  { name: "Root Canal Treatment", icon: Activity },
-  { name: "Orthodontics (Braces)", icon: Smile },
-  { name: "Pediatric Dentistry", icon: Baby },
-  { name: "Gum Surgery", icon: HeartPulse },
-  { name: "Oral Surgery", icon: Stethoscope },
-  { name: "Veneers & Crowns", icon: ShieldCheck },
+  { name: "Dentures & Bridges", icon: Activity },
+  { name: "Emergency Care", icon: AlertCircle },
+  { name: "Extractions", icon: Pill },
+  { name: "Fillings and Sealants", icon: TrendingUp },
   { name: "Laser Dentistry", icon: Zap },
-  { name: "Emergency Care", icon: Clock },
-  { name: "Teeth Cleaning", icon: Sparkles },
+  { name: "Mouth Guards", icon: ShieldCheck },
+  { name: "Online Dentist Booking", icon: Activity },
+  { name: "Oral Surgery", icon: Stethoscope },
+  { name: "Pediatric Dentistry", icon: Baby },
+  { name: "Root Canals", icon: Activity },
+  { name: "Teeth Cleaning", icon: Smile },
+  { name: "Teeth Reshaping", icon: TrendingUp },
+  { name: "Veneers & Crowns", icon: Gem },
   { name: "Aligners", icon: Smile },
+  { name: "Traditional Braces", icon: Smile },
+  { name: "Bone Grafting", icon: Syringe },
+  { name: "Gum Surgery", icon: HeartPulse },
 ];
 
 export const TIMINGS = {
