@@ -4,16 +4,13 @@ import {
   Activity,
   Sparkles,
   ShieldCheck,
-  Clock,
   Syringe,
   Zap,
   Baby,
   HeartPulse,
-  Droplet,
   Gem,
   AlertCircle,
   TrendingUp,
-  Eye,
   Pill
 } from 'lucide-react';
 
