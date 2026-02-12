@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { CLINIC_DETAILS } from '../data/clinicData';
@@ -12,8 +12,39 @@ type FormData = {
   timeSlot: string;
 };
 
+const timeSlots = [
+  { value: "Morning (10AM - 1PM)", label: "Morning (10AM - 1PM)" },
+  { value: "Afternoon (2PM - 5PM)", label: "Afternoon (2PM - 5PM)" },
+  { value: "Evening (5PM - 8PM)", label: "Evening (5PM - 8PM)" }
+];
+
+const getAvailableSlots = (clinic: string) => {
+  if (clinic === "Clinic 1") {
+    // Clinic 1: Mon–Sat: 10:00 AM – 2:30 PM & 4:00 PM – 8:00 PM, Sun: 11:00 AM – 4:00 PM
+    return {
+      "Morning (10AM - 1PM)": true,
+      "Afternoon (2PM - 5PM)": true, // 2PM-2:30PM available + 4PM-5PM available
+      "Evening (5PM - 8PM)": true
+    };
+  } else if (clinic === "Clinic 2") {
+    // Clinic 2: Mon–Sat: 10:00 AM – 5:00 PM, Sun: Closed
+    return {
+      "Morning (10AM - 1PM)": true,
+      "Afternoon (2PM - 5PM)": true,
+      "Evening (5PM - 8PM)": false // Clinic closes at 5PM
+    };
+  }
+  return {
+    "Morning (10AM - 1PM)": false,
+    "Afternoon (2PM - 5PM)": false,
+    "Evening (5PM - 8PM)": false
+  };
+};
+
 export const Appointment = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, formState: { errors }, control } = useForm<FormData>();
+  const selectedClinic = useWatch({ control, name: 'clinic' });
+  const availableSlots = getAvailableSlots(selectedClinic);
 
   const onSubmit = (data: FormData) => {
     const message = `Hello ${CLINIC_DETAILS.name},\n\nName: ${data.name}\nPhone: ${data.phone}\nPreferred Clinic: ${data.clinic}\nPreferred Date: ${data.date}\nTime Slot: ${data.timeSlot}`;
@@ -113,12 +144,19 @@ export const Appointment = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Time Slot</label>
                   <select
                     {...register("timeSlot", { required: true })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all bg-white"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    disabled={!selectedClinic}
                   >
                     <option value="">Select Time</option>
-                    <option value="Morning (10AM - 1PM)">Morning (10AM - 1PM)</option>
-                    <option value="Afternoon (2PM - 5PM)">Afternoon (2PM - 5PM)</option>
-                    <option value="Evening (5PM - 8PM)">Evening (5PM - 8PM)</option>
+                    {timeSlots.map((slot) => (
+                      <option
+                        key={slot.value}
+                        value={slot.value}
+                        disabled={!availableSlots[slot.value as keyof typeof availableSlots]}
+                      >
+                        {slot.label} {!availableSlots[slot.value as keyof typeof availableSlots] ? '(Not Available)' : ''}
+                      </option>
+                    ))}
                   </select>
                   {errors.timeSlot && <span className="text-red-500 text-xs mt-1">Time slot is required</span>}
                 </div>
