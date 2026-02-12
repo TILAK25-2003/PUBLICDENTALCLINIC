@@ -1,18 +1,47 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import { faker } from '@faker-js/faker';
 
-// Simulating Google Reviews Data
-const generateReviews = () => {
-  return Array.from({ length: 5 }).map(() => ({
-    id: faker.string.uuid(),
-    name: faker.person.fullName(),
+// Indian Patient Reviews
+const indianReviews = [
+  {
+    id: 1,
+    name: "Rajesh Kumar Singh",
     rating: 5,
-    text: faker.lorem.paragraph(2),
+    text: "Outstanding dental care experience! Dr. Kunal and his team are highly professional and compassionate. My gum treatment was painless and the results are fantastic. Would highly recommend to everyone in Muzaffarpur.",
     date: "2 weeks ago"
-  }));
-};
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    rating: 5,
+    text: "Dr. Maitraiyee is amazing! She explained every step of my dental implant procedure. The clinic is clean, modern and staff is very welcoming. Best dental clinic I've visited in Bihar.",
+    date: "1 week ago"
+  },
+  {
+    id: 3,
+    name: "Amit Patel",
+    rating: 5,
+    text: "Had my root canal treatment done here. Painless procedure with quick recovery. Dr. Kunal's expertise is evident. Thank you for giving me back my beautiful smile!",
+    date: "3 weeks ago"
+  },
+  {
+    id: 4,
+    name: "Sneha Verma",
+    rating: 5,
+    text: "Teeth whitening results are incredible! I look so much more confident now. The team is friendly and the treatment was quick. Highly satisfied with the service.",
+    date: "10 days ago"
+  },
+  {
+    id: 5,
+    name: "Vikram Mishra",
+    rating: 5,
+    text: "Got my orthodontic braces done here. The doctors are very experienced and caring. Regular follow-ups are well managed. Loving the progress with my teeth alignment!",
+    date: "1 month ago"
+  }
+];
+
+const generateReviews = () => indianReviews;
 
 export const Reviews = () => {
   const [reviews] = useState(generateReviews());
