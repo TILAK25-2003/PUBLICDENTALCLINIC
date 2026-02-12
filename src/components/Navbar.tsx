@@ -27,17 +27,13 @@ export const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-           {/* Logo Icon */}
-           <div className="w-10 h-10 bg-cta rounded-lg flex items-center justify-center text-white font-bold text-xl">
-             P
-           </div>
-           <div>
-             <h1 className={`font-bold text-lg leading-tight ${scrolled ? 'text-primary' : 'text-primary md:text-white'}`}>
-               PUBLIC DENTAL
-             </h1>
-             <p className={`text-xs tracking-wider ${scrolled ? 'text-gray-500' : 'text-gray-400 md:text-gray-200'}`}>CLINIC</p>
-           </div>
+        <div className="flex items-center gap-3">
+           {/* Logo */}
+           <img
+             src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F35a3abb907af456f92a9559fb0dc590a?format=webp&width=800&height=1200"
+             alt="Public Dental Clinic Logo"
+             className="h-12 w-12 object-contain"
+           />
         </div>
 
         {/* Desktop Nav */}
