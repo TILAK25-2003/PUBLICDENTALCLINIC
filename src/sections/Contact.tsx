@@ -30,7 +30,7 @@ export const Contact = () => {
             <div className="p-6">
               <div className="flex items-start gap-3 mb-4">
                 <MapPin className="text-cta shrink-0" />
-                <p className="text-gray-600">Muzaffarpur, Bihar (Main Branch)</p>
+                <p className="text-gray-600">Khadi bhandar, Khadi gramodyog market complex, chowk, Kanhauli, Muzaffarpur, Bihar 842002</p>
               </div>
               <a href={CLINIC_DETAILS.maps.clinic1} target="_blank" rel="noreferrer">
                 <Button variant="outline" fullWidth className="text-sm">Get Directions</Button>
