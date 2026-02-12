@@ -39,7 +39,7 @@ export const DOCTORS = [
     experience: "7+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
     patients: "5000+",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop" // Placeholder professional doctor image
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F1d5a299fdc314a16b05a81ef0f8f3f92?format=webp&width=800&height=1200"
   }
 ];
 
