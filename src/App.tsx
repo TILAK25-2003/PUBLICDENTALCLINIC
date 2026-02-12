@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
 import { Doctors } from './sections/Doctors';
+import { DoctorsDedication } from './sections/DoctorsDedication';
 import { Services } from './sections/Services';
 import { Reviews } from './sections/Reviews';
 import { Appointment } from './sections/Appointment';
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <Doctors />
+      <DoctorsDedication />
       <Services />
       <Reviews />
       <Appointment />
