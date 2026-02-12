@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { DOCTORS } from '../data/clinicData';
 
 export const DoctorsDedication = () => {
   return (
@@ -29,7 +30,8 @@ export const DoctorsDedication = () => {
               />
             </div>
             <div className="p-6 bg-white">
-              <h3 className="text-xl font-bold text-primary mb-2">Dr. Maitraiyee Ekshipta</h3>
+              <h3 className="text-xl font-bold text-primary mb-1">Dr. Maitraiyee Ekshipta</h3>
+              <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {DOCTORS[1].registration}</p>
               <p className="text-gray-600 text-sm">
                 Demonstrating meticulous attention to detail and compassionate patient care in every procedure.
               </p>
@@ -52,7 +54,8 @@ export const DoctorsDedication = () => {
               />
             </div>
             <div className="p-6 bg-white">
-              <h3 className="text-xl font-bold text-primary mb-2">Dr. Kunal Gaurav Seth</h3>
+              <h3 className="text-xl font-bold text-primary mb-1">Dr. Kunal Gaurav Seth</h3>
+              <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {DOCTORS[0].registration}</p>
               <p className="text-gray-600 text-sm">
                 Applying advanced techniques and years of expertise to ensure exceptional results for every patient.
               </p>
