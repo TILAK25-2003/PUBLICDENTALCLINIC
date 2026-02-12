@@ -7,6 +7,7 @@ import { Send, Calendar } from 'lucide-react';
 type FormData = {
   name: string;
   phone: string;
+  clinic: string;
   date: string;
   timeSlot: string;
 };
@@ -15,7 +16,7 @@ export const Appointment = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
-    const message = `Hello ${CLINIC_DETAILS.name},\n\nName: ${data.name}\nPhone: ${data.phone}\nPreferred Date: ${data.date}\nTime Slot: ${data.timeSlot}`;
+    const message = `Hello ${CLINIC_DETAILS.name},\n\nName: ${data.name}\nPhone: ${data.phone}\nPreferred Clinic: ${data.clinic}\nPreferred Date: ${data.date}\nTime Slot: ${data.timeSlot}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${CLINIC_DETAILS.phone.replace('+', '')}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -83,6 +84,19 @@ export const Appointment = () => {
                   placeholder="+91 XXXXX XXXXX"
                 />
                 {errors.phone && <span className="text-red-500 text-xs mt-1">Phone number is required</span>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Clinic</label>
+                <select
+                  {...register("clinic", { required: true })}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all bg-white"
+                >
+                  <option value="">Select Clinic</option>
+                  <option value="Clinic 1">Clinic 1</option>
+                  <option value="Clinic 2">Clinic 2</option>
+                </select>
+                {errors.clinic && <span className="text-red-500 text-xs mt-1">Clinic selection is required</span>}
               </div>
 
               <div className="grid grid-cols-2 gap-4">
