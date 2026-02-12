@@ -56,7 +56,7 @@ export const Contact = () => {
             <div className="p-6">
               <div className="flex items-start gap-3 mb-4">
                 <MapPin className="text-cta shrink-0" />
-                <p className="text-gray-600">Muzaffarpur, Bihar (Second Branch)</p>
+                <p className="text-gray-600">Jalan Aushadhalay, Saraiyaganj tower, Near chunnilal megamart, Muzaffarpur, Bihar 842001</p>
               </div>
               <a href={CLINIC_DETAILS.maps.clinic2} target="_blank" rel="noreferrer">
                 <Button variant="outline" fullWidth className="text-sm">Get Directions</Button>
