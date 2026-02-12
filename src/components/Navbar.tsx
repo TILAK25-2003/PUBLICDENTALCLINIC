@@ -31,7 +31,7 @@ export const Navbar = () => {
            {/* Logo */}
            <div className="h-20 w-20 rounded-full overflow-hidden flex items-center justify-center">
              <img
-               src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F35a3abb907af456f92a9559fb0dc590a?format=webp&width=800&height=1200"
+               src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F30746911f3f346ee8e67ee39458303d5?format=webp&width=800&height=1200"
                alt="Public Dental Clinic Logo"
                className="h-full w-full object-contain"
              />
