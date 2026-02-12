@@ -29,11 +29,13 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
            {/* Logo */}
-           <img
-             src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F35a3abb907af456f92a9559fb0dc590a?format=webp&width=800&height=1200"
-             alt="Public Dental Clinic Logo"
-             className="h-20 w-20 object-contain rounded-full"
-           />
+           <div className="h-20 w-20 rounded-full overflow-hidden flex items-center justify-center">
+             <img
+               src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F35a3abb907af456f92a9559fb0dc590a?format=webp&width=800&height=1200"
+               alt="Public Dental Clinic Logo"
+               className="h-full w-full object-contain"
+             />
+           </div>
         </div>
 
         {/* Desktop Nav */}
