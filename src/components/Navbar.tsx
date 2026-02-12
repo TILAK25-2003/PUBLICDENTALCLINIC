@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CLINIC_DETAILS } from '../data/clinicData';
+
+const ScrollLink = Link as any;
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,23 +27,21 @@ export const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-           {/* Logo Icon */}
-           <div className="w-10 h-10 bg-cta rounded-lg flex items-center justify-center text-white font-bold text-xl">
-             P
-           </div>
-           <div>
-             <h1 className={`font-bold text-lg leading-tight ${scrolled ? 'text-primary' : 'text-primary md:text-white'}`}>
-               PUBLIC DENTAL
-             </h1>
-             <p className={`text-xs tracking-wider ${scrolled ? 'text-gray-500' : 'text-gray-400 md:text-gray-200'}`}>CLINIC</p>
+        <div className="flex items-center gap-3">
+           {/* Logo */}
+           <div className="h-20 w-20 rounded-full overflow-hidden flex items-center justify-center">
+             <img
+               src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F30746911f3f346ee8e67ee39458303d5?format=webp&width=800&height=1200"
+               alt="Public Dental Clinic Logo"
+               className="h-full w-full object-contain"
+             />
            </div>
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <ScrollLink
               key={link.name}
               to={link.to}
               smooth={true}
@@ -49,7 +49,7 @@ export const Navbar = () => {
               className={`cursor-pointer font-medium hover:text-cta transition-colors ${scrolled ? 'text-primary' : 'text-white/90 hover:text-white'}`}
             >
               {link.name}
-            </Link>
+            </ScrollLink>
           ))}
           <a 
             href={`tel:${CLINIC_DETAILS.phone}`}
@@ -77,7 +77,7 @@ export const Navbar = () => {
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
-                <Link
+                <ScrollLink
                   key={link.name}
                   to={link.to}
                   smooth={true}
@@ -86,7 +86,7 @@ export const Navbar = () => {
                   className="text-primary font-medium py-2 border-b border-gray-50"
                 >
                   {link.name}
-                </Link>
+                </ScrollLink>
               ))}
               <a 
                 href={`tel:${CLINIC_DETAILS.phone}`}

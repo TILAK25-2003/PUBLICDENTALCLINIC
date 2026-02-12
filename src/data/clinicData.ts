@@ -1,17 +1,17 @@
-import { 
-  Stethoscope, 
-  Smile, 
-  Activity, 
-  Sparkles, 
-  ShieldCheck, 
-  Clock, 
-  Phone, 
-  MapPin,
-  Calendar,
+import {
+  Stethoscope,
+  Smile,
+  Activity,
+  Sparkles,
+  ShieldCheck,
   Syringe,
   Zap,
   Baby,
-  HeartPulse
+  HeartPulse,
+  Gem,
+  AlertCircle,
+  TrendingUp,
+  Pill
 } from 'lucide-react';
 
 export const CLINIC_DETAILS = {
@@ -29,36 +29,48 @@ export const DOCTORS = [
   {
     id: 1,
     name: "Dr. Kunal Gaurav Seth",
+    registration: "6610/A",
     qualification: "BDS (Rohtak), MDS (Delhi NCR), A.O.I.P (Spain), M.I.S.P",
     experience: "11+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
     patients: "5000+",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop" // Placeholder professional doctor image
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F6a3b04a3b012465a83cea67d375992fa?format=webp&width=800&height=1200"
   },
   {
     id: 2,
     name: "Dr. Maitraiyee Ekshipta",
+    registration: "8553/A",
     qualification: "BDS (Patna), Ex-Resident (Budhha, Bhilai)",
     experience: "7+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
-    patients: "5000+",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop" // Placeholder professional doctor image
+    patients: "2500+",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F1d5a299fdc314a16b05a81ef0f8f3f92?format=webp&width=800&height=1200"
   }
 ];
 
 export const SERVICES = [
   { name: "Teeth Whitening", icon: Sparkles },
+  { name: "Bonding", icon: Gem },
+  { name: "Check-ups", icon: ShieldCheck },
+  { name: "Cosmetic Procedures", icon: Sparkles },
   { name: "Dental Implants", icon: Syringe },
-  { name: "Root Canal Treatment", icon: Activity },
-  { name: "Orthodontics (Braces)", icon: Smile },
-  { name: "Pediatric Dentistry", icon: Baby },
-  { name: "Gum Surgery", icon: HeartPulse },
-  { name: "Oral Surgery", icon: Stethoscope },
-  { name: "Veneers & Crowns", icon: ShieldCheck },
+  { name: "Dentures & Bridges", icon: Activity },
+  { name: "Emergency Care", icon: AlertCircle },
+  { name: "Extractions", icon: Pill },
+  { name: "Fillings and Sealants", icon: TrendingUp },
   { name: "Laser Dentistry", icon: Zap },
-  { name: "Emergency Care", icon: Clock },
-  { name: "Teeth Cleaning", icon: Sparkles },
+  { name: "Mouth Guards", icon: ShieldCheck },
+  { name: "Online Dentist Booking", icon: Activity },
+  { name: "Oral Surgery", icon: Stethoscope },
+  { name: "Pediatric Dentistry", icon: Baby },
+  { name: "Root Canals", icon: Activity },
+  { name: "Teeth Cleaning", icon: Smile },
+  { name: "Teeth Reshaping", icon: TrendingUp },
+  { name: "Veneers & Crowns", icon: Gem },
   { name: "Aligners", icon: Smile },
+  { name: "Traditional Braces", icon: Smile },
+  { name: "Bone Grafting", icon: Syringe },
+  { name: "Gum Surgery", icon: HeartPulse },
 ];
 
 export const TIMINGS = {

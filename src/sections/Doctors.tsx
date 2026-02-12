@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { DOCTORS } from '../data/clinicData';
 import { Award, Users, GraduationCap } from 'lucide-react';
@@ -37,19 +36,20 @@ export const Doctors = () => {
                 
                 <div className="p-6 md:w-3/5 flex flex-col justify-center">
                   <h3 className="text-2xl font-bold text-primary mb-1">{doctor.name}</h3>
+                  <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {doctor.registration}</p>
                   <p className="text-cta font-medium text-sm mb-4">{doctor.specialization}</p>
-                  
+
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <GraduationCap className="text-accent shrink-0 mt-1" size={18} />
                       <p className="text-gray-600 text-sm">{doctor.qualification}</p>
                     </div>
-                    
+
                     <div className="flex items-center gap-3">
                       <Award className="text-accent shrink-0" size={18} />
                       <p className="text-gray-700 font-medium text-sm">{doctor.experience} Experience</p>
                     </div>
-                    
+
                     <div className="flex items-center gap-3">
                       <Users className="text-accent shrink-0" size={18} />
                       <p className="text-gray-700 font-medium text-sm">{doctor.patients} Patients Treated</p>

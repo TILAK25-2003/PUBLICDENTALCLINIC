@@ -1,4 +1,3 @@
-import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CLINIC_DETAILS } from '../data/clinicData';
