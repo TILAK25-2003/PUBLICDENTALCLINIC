@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2A3E66", // Navy Blue - Header, logo, footer, navigation
-        secondary: "#FFFFFF", // White text/content
-        accent: "#45A1E7", // Sky Blue - Icons, hover effects, dividers
-        accentLight: "#A8CFF1", // Light Blue - Backgrounds, cards, sections
-        cta: "#00589F", // Deep Blue - CTA buttons, links, highlights
-        ctaHover: "#003F75", // Darker shade for hover
-        support: "#B9A6DC", // Soft Lavender - Testimonials, offers, accents
-        background: "#A8CFF1", // Light Blue - Page backgrounds
+        primary: "#620007", // Deep Maroon - Headers, navbar, footer, strong accents
+        secondary: "#84473C", // Warm Brown - Cards, section backgrounds, icons
+        accent: "#B3967D", // Muted Taupe - Secondary text, borders, dividers
+        accentLight: "#ECDBC7", // Soft Cream - Main background
+        cta: "#890004", // Bold Red - CTA buttons, highlights, active states
+        ctaHover: "#6B0003", // Darker red for hover
+        support: "#84473C", // Warm Brown - Supporting elements
+        background: "#ECDBC7", // Soft Cream - Page backgrounds
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

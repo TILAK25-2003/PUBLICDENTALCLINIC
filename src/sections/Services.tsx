@@ -20,12 +20,12 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ y: -5 }}
-              className="p-6 rounded-xl bg-white border border-gray-100 hover:border-cta/30 hover:shadow-lg transition-all duration-300 group cursor-default"
+              className="p-6 rounded-lg bg-white border border-accent/20 hover:border-secondary/40 hover:shadow-xl transition-all duration-300 group cursor-default"
             >
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-cta transition-colors duration-300">
-                <service.icon className="text-cta group-hover:text-white transition-colors duration-300" size={24} />
+              <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-secondary transition-colors duration-300">
+                <service.icon className="text-secondary group-hover:text-white transition-colors duration-300" size={24} />
               </div>
-              <h3 className="font-semibold text-primary group-hover:text-cta transition-colors duration-300 mb-2">
+              <h3 className="font-semibold text-primary group-hover:text-secondary transition-colors duration-300 mb-2">
                 {service.name}
               </h3>
               <p className="text-xs text-gray-600 leading-relaxed">

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-accentLight text-primary font-sans antialiased;
+  @apply bg-background text-primary font-sans antialiased;
 }
 
 /* Custom Scrollbar */
