@@ -25,9 +25,12 @@ export const Services = () => {
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-cta transition-colors duration-300">
                 <service.icon className="text-cta group-hover:text-white transition-colors duration-300" size={24} />
               </div>
-              <h3 className="font-semibold text-primary group-hover:text-cta transition-colors duration-300">
+              <h3 className="font-semibold text-primary group-hover:text-cta transition-colors duration-300 mb-2">
                 {service.name}
               </h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
