@@ -8,8 +8,8 @@ export const Doctors = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Meet Our Experts</h2>
-          <div className="w-20 h-1 bg-cta mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
             Highly qualified specialists with years of experience in advanced dental procedures.
           </p>
         </div>
@@ -22,7 +22,7 @@ export const Doctors = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:border-accent hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="flex flex-col md:flex-row h-full">
                 <div className="md:w-2/5 h-64 md:h-auto relative">
@@ -36,23 +36,23 @@ export const Doctors = () => {
                 
                 <div className="p-6 md:w-3/5 flex flex-col justify-center">
                   <h3 className="text-2xl font-bold text-primary mb-1">{doctor.name}</h3>
-                  <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {doctor.registration}</p>
-                  <p className="text-cta font-medium text-sm mb-4">{doctor.specialization}</p>
+                  <p className="text-xs text-gray-600 font-semibold mb-2">Reg. No: {doctor.registration}</p>
+                  <p className="text-accent font-semibold text-sm mb-4">{doctor.specialization}</p>
 
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <GraduationCap className="text-accent shrink-0 mt-1" size={18} />
-                      <p className="text-gray-600 text-sm">{doctor.qualification}</p>
+                      <p className="text-gray-700 text-sm">{doctor.qualification}</p>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Award className="text-accent shrink-0" size={18} />
-                      <p className="text-gray-700 font-medium text-sm">{doctor.experience} Experience</p>
+                      <p className="text-gray-800 font-medium text-sm">{doctor.experience} Experience</p>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <Users className="text-accent shrink-0" size={18} />
-                      <p className="text-gray-700 font-medium text-sm">{doctor.patients} Patients Treated</p>
+                      <p className="text-gray-800 font-medium text-sm">{doctor.patients} Patients Treated</p>
                     </div>
                   </div>
                 </div>

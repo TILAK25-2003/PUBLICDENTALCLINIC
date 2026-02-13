@@ -7,11 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1C1F26", // Rich Charcoal
-        secondary: "#FAFAFA", // Soft White
-        accent: "#B8BDC7", // Platinum Grey
-        cta: "#1E3A8A", // Deep Blue
-        ctaHover: "#172E6E", // Darker shade for hover
+        primary: "#0A1A2F", // Deep Navy Blue - Header, navbar, footer, hero
+        secondary: "#F7F7F7", // Soft Off-White - Alternate section backgrounds
+        accent: "#D4AF37", // Champagne Gold - Buttons, icons, highlights
+        accentLight: "#FFFFFF", // Pure White - Main background, content
+        cta: "#D4AF37", // Champagne Gold - CTA buttons
+        ctaHover: "#B8960F", // Darker gold for hover
+        support: "#D4AF37", // Champagne Gold - Supporting elements
+        background: "#FFFFFF", // Pure White - Base background
+        darkBg: "#0A1A2F", // Deep Navy - Depth layers
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

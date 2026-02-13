@@ -3,7 +3,7 @@ import { DOCTORS } from '../data/clinicData';
 
 export const DoctorsDedication = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-gradient-to-b from-background to-accentLight">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Dedication to Excellence</h2>

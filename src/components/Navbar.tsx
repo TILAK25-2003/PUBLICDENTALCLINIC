@@ -25,7 +25,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary shadow-lg py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
            {/* Logo */}
@@ -46,7 +46,7 @@ export const Navbar = () => {
               to={link.to}
               smooth={true}
               offset={-80}
-              className={`cursor-pointer font-medium hover:text-cta transition-colors ${scrolled ? 'text-primary' : 'text-white/90 hover:text-white'}`}
+              className={`cursor-pointer font-medium hover:text-accent transition-colors ${scrolled ? 'text-white hover:text-accent' : 'text-white/80 hover:text-white'}`}
             >
               {link.name}
             </ScrollLink>
@@ -62,7 +62,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-primary">
-          {isOpen ? <X size={28} /> : <Menu size={28} className={scrolled ? 'text-primary' : 'text-primary md:text-white'} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} className={scrolled ? 'text-white' : 'text-white'} />}
         </button>
       </div>
 
@@ -73,7 +73,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="md:hidden bg-white border-t border-gray-200 overflow-hidden"
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
@@ -83,7 +83,7 @@ export const Navbar = () => {
                   smooth={true}
                   offset={-80}
                   onClick={() => setIsOpen(false)}
-                  className="text-primary font-medium py-2 border-b border-gray-50"
+                  className="text-primary font-medium py-2 border-b border-gray-100"
                 >
                   {link.name}
                 </ScrollLink>

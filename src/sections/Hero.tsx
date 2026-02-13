@@ -15,7 +15,7 @@ export const Hero = () => {
           alt="Modern Dental Clinic" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -25,12 +25,12 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl text-white"
         >
-          <div className="inline-block px-4 py-1 bg-cta/20 border border-cta/30 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-6">
-            Trusted by 5000+ Patients
+          <div className="inline-block px-4 py-2 bg-accent/20 border border-accent backdrop-blur-md rounded-full text-accent text-sm font-semibold mb-6">
+            ✓ Trusted by 5000+ Patients
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 font-serif">
-            World-Class Dental Care in <span className="text-blue-400">Muzaffarpur</span>
+            World-Class Dental Care in <span className="text-accent">Muzaffarpur</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
@@ -55,7 +55,7 @@ export const Hero = () => {
       </div>
       
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-secondary to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-accentLight via-transparent to-transparent z-10"></div>
     </section>
   );
 };

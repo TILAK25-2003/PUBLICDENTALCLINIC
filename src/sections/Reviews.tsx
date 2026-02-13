@@ -65,7 +65,7 @@ export const Reviews = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Patient Stories</h2>
-          <div className="w-20 h-1 bg-cta mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
           <div className="flex items-center justify-center gap-2 mt-4 text-yellow-400">
              <Star fill="currentColor" />
              <Star fill="currentColor" />
@@ -84,10 +84,10 @@ export const Reviews = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 text-center border border-white/10"
+              className="bg-secondary/30 backdrop-blur-xl rounded-2xl p-8 md:p-12 text-center border border-accent/30 shadow-2xl"
             >
-              <Quote className="text-cta/50 w-12 h-12 mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-gray-200 italic mb-6 leading-relaxed">
+              <Quote className="text-accent/60 w-12 h-12 mx-auto mb-6" />
+              <p className="text-lg md:text-xl text-white italic mb-6 leading-relaxed">
                 "{reviews[currentIndex].text}"
               </p>
               <div>
@@ -104,7 +104,7 @@ export const Reviews = () => {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? 'bg-cta w-8' : 'bg-gray-600 hover:bg-gray-500'
+                idx === currentIndex ? 'bg-accent w-8' : 'bg-gray-600 hover:bg-accent/50'
               }`}
             />
           ))}
