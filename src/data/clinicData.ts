@@ -40,7 +40,7 @@ export const DOCTORS = [
     id: 2,
     name: "Dr. Maitraiyee Ekshipta",
     registration: "8553/A",
-    qualification: "BDS (Patna), Ex-Resident (Budhha, Bhilai)",
+    qualification: "BDS (Patna), Ex-Resident (Buddha dental college, Patna)",
     experience: "7+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
     patients: "2500+",
