@@ -25,7 +25,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
            {/* Logo */}
@@ -46,7 +46,7 @@ export const Navbar = () => {
               to={link.to}
               smooth={true}
               offset={-80}
-              className={`cursor-pointer font-medium hover:text-cta transition-colors ${scrolled ? 'text-primary' : 'text-white/90 hover:text-white'}`}
+              className={`cursor-pointer font-medium hover:text-accent transition-colors ${scrolled ? 'text-white hover:text-accent' : 'text-white/90 hover:text-white'}`}
             >
               {link.name}
             </ScrollLink>

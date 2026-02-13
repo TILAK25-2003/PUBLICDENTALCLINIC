@@ -54,7 +54,7 @@ export const Appointment = () => {
   };
 
   return (
-    <section id="appointment" className="py-20 bg-secondary">
+    <section id="appointment" className="py-20 bg-accentLight">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           

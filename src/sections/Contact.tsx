@@ -4,7 +4,7 @@ import { Button } from '../components/ui/Button';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-accentLight">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Visit Us</h2>
