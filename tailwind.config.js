@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#620000", // Deep Maroon - Navigation, headings, footer
-        secondary: "#450000", // Dark Wine Red - Cards, content sections
-        accent: "#800000", // Crimson Red - Primary brand, highlights
-        accentLight: "#2A0001", // Near-Black Red - Gradients, depth
-        cta: "#800000", // Crimson Red - CTA buttons
-        ctaHover: "#620000", // Deep Maroon for hover
-        support: "#2A0001", // Near-Black Red - Supporting elements
-        background: "#000000", // Pure Black - Base background
-        darkBg: "#0A0000", // Very dark red-black for depth
+        primary: "#0A1A2F", // Deep Navy Blue - Header, navbar, footer, hero
+        secondary: "#F7F7F7", // Soft Off-White - Alternate section backgrounds
+        accent: "#D4AF37", // Champagne Gold - Buttons, icons, highlights
+        accentLight: "#FFFFFF", // Pure White - Main background, content
+        cta: "#D4AF37", // Champagne Gold - CTA buttons
+        ctaHover: "#B8960F", // Darker gold for hover
+        support: "#D4AF37", // Champagne Gold - Supporting elements
+        background: "#FFFFFF", // Pure White - Base background
+        darkBg: "#0A1A2F", // Deep Navy - Depth layers
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

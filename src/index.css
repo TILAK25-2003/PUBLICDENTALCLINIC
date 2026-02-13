@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-background text-gray-200 font-sans antialiased;
+  @apply bg-background text-primary font-sans antialiased;
 }
 
 /* Custom Scrollbar */
@@ -16,9 +16,9 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-secondary;
+  @apply bg-white;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent/50 rounded-full hover:bg-cta;
+  @apply bg-accent/70 rounded-full hover:bg-accent;
 }

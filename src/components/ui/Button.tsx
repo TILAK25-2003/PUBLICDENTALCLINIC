@@ -16,9 +16,9 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform active:scale-95";
 
   const variants = {
-    primary: "bg-cta text-white hover:bg-ctaHover shadow-lg hover:shadow-xl",
-    outline: "border-2 border-cta text-cta hover:bg-cta hover:text-white",
-    white: "bg-white text-cta hover:bg-gray-100 shadow-md"
+    primary: "bg-cta text-white hover:bg-ctaHover shadow-lg hover:shadow-xl hover:scale-105",
+    outline: "border-2 border-cta text-cta hover:bg-cta hover:text-white hover:scale-105",
+    white: "bg-white text-cta hover:bg-gray-100 shadow-md hover:scale-105"
   };
 
   return (
