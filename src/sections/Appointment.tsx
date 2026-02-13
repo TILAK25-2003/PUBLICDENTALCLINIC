@@ -54,32 +54,32 @@ export const Appointment = () => {
   };
 
   return (
-    <section id="appointment" className="py-20 bg-accentLight">
+    <section id="appointment" className="py-20 bg-gradient-to-b from-background to-accentLight">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           
           {/* Info Side */}
           <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 font-serif">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-serif">
               Ready to Smile with Confidence?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-300 mb-8">
               Book your appointment easily via WhatsApp. Fill out the form, and we'll confirm your slot instantly.
             </p>
             
-            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-cta">
-              <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                <Calendar className="text-cta" />
+            <div className="bg-secondary/50 p-6 rounded-xl shadow-lg border-l-4 border-accent backdrop-blur-sm">
+              <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white">
+                <Calendar className="text-accent" />
                 Clinic Timings
               </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600 mt-4">
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300 mt-4">
                 <div>
-                  <p className="font-semibold text-primary">Clinic 1</p>
+                  <p className="font-semibold text-accent">Clinic 1</p>
                   <p>Mon–Sat: 10:00 AM – 2:30 PM & 4:00 PM – 8:00 PM</p>
                   <p>Sun: 11:00 AM – 4:00 PM</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-primary">Clinic 2</p>
+                  <p className="font-semibold text-accent">Clinic 2</p>
                   <p>Mon–Sat: 10:00 AM – 5:00 PM</p>
                   <p>Sun: Closed</p>
                 </div>
@@ -88,40 +88,40 @@ export const Appointment = () => {
           </div>
 
           {/* Form Side */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:w-1/2 w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
+            className="lg:w-1/2 w-full bg-secondary/80 p-8 rounded-2xl shadow-2xl border border-accent/30 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-primary mb-6">Book Appointment</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Book Appointment</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Patient Name</label>
+                <label className="block text-sm font-medium text-gray-200 mb-1">Patient Name</label>
                 <input
                   {...register("name", { required: true })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-accent/30 bg-background focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-white placeholder-gray-500"
                   placeholder="Enter your full name"
                 />
                 {errors.name && <span className="text-red-500 text-xs mt-1">Name is required</span>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                <label className="block text-sm font-medium text-gray-200 mb-1">WhatsApp Number</label>
                 <input
                   {...register("phone", { required: true })}
                   type="tel"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-accent/30 bg-background focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-white placeholder-gray-500"
                   placeholder="+91 XXXXX XXXXX"
                 />
                 {errors.phone && <span className="text-red-500 text-xs mt-1">Phone number is required</span>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Clinic</label>
+                <label className="block text-sm font-medium text-gray-200 mb-1">Preferred Clinic</label>
                 <select
                   {...register("clinic", { required: true })}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-lg border border-accent/30 bg-background focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-white"
                 >
                   <option value="">Select Clinic</option>
                   <option value="Clinic 1">Clinic 1</option>
@@ -132,19 +132,19 @@ export const Appointment = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                  <label className="block text-sm font-medium text-gray-200 mb-1">Preferred Date</label>
                   <input
                     {...register("date", { required: true })}
                     type="date"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-accent/30 bg-background focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-white"
                   />
                   {errors.date && <span className="text-red-500 text-xs mt-1">Date is required</span>}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Time Slot</label>
+                  <label className="block text-sm font-medium text-gray-200 mb-1">Time Slot</label>
                   <select
                     {...register("timeSlot", { required: true })}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cta focus:border-transparent outline-none transition-all bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 rounded-lg border border-accent/30 bg-background focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all text-white disabled:bg-background/50 disabled:cursor-not-allowed"
                     disabled={!selectedClinic}
                   >
                     <option value="">Select Time</option>
@@ -166,7 +166,7 @@ export const Appointment = () => {
                 <Send size={18} />
                 Book via WhatsApp
               </Button>
-              <p className="text-xs text-center text-gray-500 mt-2">
+              <p className="text-xs text-center text-gray-400 mt-2">
                 You will be redirected to WhatsApp to send the details.
               </p>
             </form>

@@ -3,7 +3,7 @@ import { SERVICES } from '../data/clinicData';
 
 export const Services = () => {
   return (
-    <section id="services" className="py-20 bg-accentLight">
+    <section id="services" className="py-20 bg-gradient-to-b from-accentLight to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Comprehensive Dental Services</h2>
@@ -20,15 +20,15 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ y: -5 }}
-              className="p-6 rounded-lg bg-white border border-accent/20 hover:border-secondary/40 hover:shadow-xl transition-all duration-300 group cursor-default"
+              className="p-6 rounded-xl bg-gradient-to-br from-secondary to-accentLight border border-accent/20 hover:border-accent/50 hover:shadow-2xl transition-all duration-300 group cursor-default hover:scale-105"
             >
-              <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-secondary transition-colors duration-300">
-                <service.icon className="text-secondary group-hover:text-white transition-colors duration-300" size={24} />
+              <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-accent transition-colors duration-300">
+                <service.icon className="text-accent group-hover:text-white transition-colors duration-300" size={24} />
               </div>
-              <h3 className="font-semibold text-primary group-hover:text-secondary transition-colors duration-300 mb-2">
+              <h3 className="font-semibold text-white group-hover:text-yellow-200 transition-colors duration-300 mb-2">
                 {service.name}
               </h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-300 leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
