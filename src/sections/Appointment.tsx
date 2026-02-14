@@ -47,7 +47,7 @@ export const Appointment = () => {
   const availableSlots = getAvailableSlots(selectedClinic);
 
   const onSubmit = (data: FormData) => {
-    const message = `Hello ${CLINIC_DETAILS.name},\n\nName: ${data.name}\nPhone: ${data.phone}\nPreferred Clinic: ${data.clinic}\nPreferred Date: ${data.date}\nTime Slot: ${data.timeSlot}`;
+    const message = `Hello ${CLINIC_DETAILS.name},\nI would like to book an appointment\nName: ${data.name}\nPhone: ${data.phone}\nPreferred Clinic: ${data.clinic}\nPreferred Date: ${data.date}\nTime Slot: ${data.timeSlot}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${CLINIC_DETAILS.phone.replace('+', '')}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
