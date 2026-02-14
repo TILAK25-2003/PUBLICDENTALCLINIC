@@ -3,12 +3,12 @@ import { DOCTORS } from '../data/clinicData';
 
 export const DoctorsDedication = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-accentLight">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Dedication to Excellence</h2>
-          <div className="w-20 h-1 bg-cta mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Dedication to <span className="text-accent">Excellence</span></h2>
+          <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="mt-6 text-gray-700 max-w-2xl mx-auto leading-relaxed">
             Meet our highly skilled and dedicated doctors committed to providing the finest dental care with precision, compassion, and the latest technology.
           </p>
         </div>
@@ -20,19 +20,19 @@ export const DoctorsDedication = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-accent transition-all duration-300"
           >
             <div className="relative h-96 overflow-hidden bg-gray-200">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2Ff69a188e3fb34f149ee2d0f352594896?format=webp&width=800&height=1200"
                 alt="Dr. Maitraiyee - Dental Procedure"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </div>
-            <div className="p-6 bg-white">
-              <h3 className="text-xl font-bold text-primary mb-1">Dr. Maitraiyee Ekshipta</h3>
-              <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {DOCTORS[1].registration}</p>
-              <p className="text-gray-600 text-sm">
+            <div className="p-8 bg-white">
+              <h3 className="text-2xl font-bold text-primary mb-2">Dr. Maitraiyee Ekshipta</h3>
+              <p className="text-xs text-accent font-semibold mb-3 tracking-wide">Reg. No: {DOCTORS[1].registration}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Demonstrating meticulous attention to detail and compassionate patient care in every procedure.
               </p>
             </div>
@@ -44,19 +44,19 @@ export const DoctorsDedication = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl hover:border-accent transition-all duration-300"
           >
             <div className="relative h-96 overflow-hidden bg-gray-200">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F94c9fe28b05e4aacae60f6ed1cacecdf?format=webp&width=800&height=1200"
                 alt="Dr. Kunal - Dental Procedure"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </div>
-            <div className="p-6 bg-white">
-              <h3 className="text-xl font-bold text-primary mb-1">Dr. Kunal Gaurav Seth</h3>
-              <p className="text-xs text-gray-500 font-semibold mb-2">Reg. No: {DOCTORS[0].registration}</p>
-              <p className="text-gray-600 text-sm">
+            <div className="p-8 bg-white">
+              <h3 className="text-2xl font-bold text-primary mb-2">Dr. Kunal Gaurav Seth</h3>
+              <p className="text-xs text-accent font-semibold mb-3 tracking-wide">Reg. No: {DOCTORS[0].registration}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Applying advanced techniques and years of expertise to ensure exceptional results for every patient.
               </p>
             </div>
@@ -65,14 +65,15 @@ export const DoctorsDedication = () => {
 
         {/* Trust Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 bg-white p-8 rounded-2xl shadow-md border-l-4 border-cta max-w-3xl mx-auto"
+          className="mt-16 bg-primary text-white p-10 rounded-2xl shadow-xl border-l-4 border-accent max-w-3xl mx-auto"
         >
-          <p className="text-center text-gray-700 text-lg">
-            <span className="font-semibold text-primary">Why Trust Us?</span> Our doctors bring years of specialized experience, advanced training, and an unwavering commitment to patient satisfaction. Every procedure is performed with precision, using state-of-the-art technology and the highest standards of clinical care.
+          <p className="text-center text-lg leading-relaxed">
+            <span className="text-accent font-semibold block mb-3">Why Trust Us?</span>
+            Our doctors bring years of specialized experience, advanced training, and an unwavering commitment to patient satisfaction. Every procedure is performed with precision, using state-of-the-art technology and the highest standards of clinical care.
           </p>
         </motion.div>
       </div>

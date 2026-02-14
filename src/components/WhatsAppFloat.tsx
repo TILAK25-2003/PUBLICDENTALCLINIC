@@ -10,11 +10,12 @@ export const WhatsAppFloat = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noreferrer"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ delay: 1 }}
-      whileHover={{ scale: 1.1 }}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center cursor-pointer"
+      initial={{ scale: 0, y: 20 }}
+      animate={{ scale: 1, y: 0 }}
+      transition={{ delay: 1, type: 'spring' }}
+      whileHover={{ scale: 1.15, y: -5 }}
+      whileTap={{ scale: 0.95 }}
+      className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:shadow-2xl flex items-center justify-center cursor-pointer transition-all duration-300"
       aria-label="Chat on WhatsApp"
     >
       <MessageCircle size={32} fill="white" />
