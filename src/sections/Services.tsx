@@ -20,17 +20,26 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ y: -8 }}
-              className="p-6 rounded-2xl bg-white border border-gray-200 hover:border-accent hover:shadow-2xl transition-all duration-300 group cursor-default"
+              className="rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-accent hover:shadow-2xl transition-all duration-300 group cursor-default flex flex-col h-full"
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-all duration-300">
-                <service.icon className="text-accent group-hover:text-accent transition-colors duration-300" size={28} />
+              <div className="relative h-40 overflow-hidden bg-gray-200">
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h3 className="font-semibold text-primary group-hover:text-accent transition-colors duration-300 mb-3 text-sm">
-                {service.name}
-              </h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-all duration-300">
+                  <service.icon className="text-accent group-hover:text-accent transition-colors duration-300" size={24} />
+                </div>
+                <h3 className="font-semibold text-primary group-hover:text-accent transition-colors duration-300 mb-3 text-sm">
+                  {service.name}
+                </h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
