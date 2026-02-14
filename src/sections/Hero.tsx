@@ -19,21 +19,21 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-2xl text-white"
         >
-          <div className="inline-block px-4 py-2 bg-accent/20 border border-accent backdrop-blur-md rounded-full text-accent text-sm font-semibold mb-6">
+          <div className="inline-block px-5 py-2.5 bg-accent/20 border border-accent backdrop-blur-md rounded-full text-accent text-sm font-semibold mb-8 hover:bg-accent/30 transition-colors">
             ✓ Trusted by 5000+ Patients
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 font-serif">
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-serif">
             World-Class Dental Care in <span className="text-accent">Muzaffarpur</span>
           </h1>
-          
-          <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+
+          <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
             Expert Gum Specialists & Oral Implantologists dedicated to restoring your smile with precision and care.
           </p>
 

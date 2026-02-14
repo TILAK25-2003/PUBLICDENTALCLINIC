@@ -64,15 +64,15 @@ export const Reviews = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Patient Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Patient <span className="text-accent">Stories</span></h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
-          <div className="flex items-center justify-center gap-2 mt-4 text-yellow-400">
-             <Star fill="currentColor" />
-             <Star fill="currentColor" />
-             <Star fill="currentColor" />
-             <Star fill="currentColor" />
-             <Star fill="currentColor" />
-             <span className="text-white ml-2 font-medium">5.0 Google Rating</span>
+          <div className="flex items-center justify-center gap-2 mt-6 text-yellow-400 flex-wrap">
+             <Star fill="currentColor" size={20} />
+             <Star fill="currentColor" size={20} />
+             <Star fill="currentColor" size={20} />
+             <Star fill="currentColor" size={20} />
+             <Star fill="currentColor" size={20} />
+             <span className="text-white ml-3 font-medium">5.0 Google Rating</span>
           </div>
         </div>
 

@@ -4,12 +4,12 @@ import { Award, Users, GraduationCap } from 'lucide-react';
 
 export const Doctors = () => {
   return (
-    <section id="doctors" className="py-20 bg-secondary">
+    <section id="doctors" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Meet Our Experts</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Meet Our <span className="text-accent">Experts</span></h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+          <p className="mt-6 text-gray-700 max-w-2xl mx-auto leading-relaxed">
             Highly qualified specialists with years of experience in advanced dental procedures.
           </p>
         </div>

@@ -25,11 +25,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary shadow-lg py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-md ${scrolled ? 'bg-primary/95 shadow-xl py-2 border-b border-accent/20' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
            {/* Logo */}
-           <div className="h-20 w-20 rounded-full overflow-hidden flex items-center justify-center">
+           <div className="h-16 w-16 rounded-full overflow-hidden flex items-center justify-center hover:shadow-lg transition-shadow duration-300">
              <img
                src="https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F30746911f3f346ee8e67ee39458303d5?format=webp&width=800&height=1200"
                alt="Public Dental Clinic Logo"
@@ -39,21 +39,21 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <ScrollLink
               key={link.name}
               to={link.to}
               smooth={true}
               offset={-80}
-              className={`cursor-pointer font-medium hover:text-accent transition-colors ${scrolled ? 'text-white hover:text-accent' : 'text-white/80 hover:text-white'}`}
+              className={`cursor-pointer font-medium transition-all duration-300 relative hover:after:scale-x-100 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:origin-left after:scale-x-0 after:transition-transform after:duration-300 ${scrolled ? 'text-white' : 'text-white/90 hover:text-white'}`}
             >
               {link.name}
             </ScrollLink>
           ))}
-          <a 
+          <a
             href={`tel:${CLINIC_DETAILS.phone}`}
-            className="flex items-center gap-2 bg-cta text-white px-4 py-2 rounded-full hover:bg-ctaHover transition-colors text-sm font-semibold"
+            className="flex items-center gap-2 bg-cta text-white px-5 py-2.5 rounded-full hover:bg-ctaHover shadow-lg hover:shadow-xl transition-all duration-300 text-sm font-semibold"
           >
             <Phone size={16} />
             {CLINIC_DETAILS.displayPhone}
@@ -73,9 +73,9 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200 overflow-hidden"
+            className="md:hidden bg-primary border-t border-accent/30 overflow-hidden"
           >
-            <div className="flex flex-col p-4 gap-4">
+            <div className="flex flex-col p-4 gap-3">
               {navLinks.map((link) => (
                 <ScrollLink
                   key={link.name}
@@ -83,14 +83,14 @@ export const Navbar = () => {
                   smooth={true}
                   offset={-80}
                   onClick={() => setIsOpen(false)}
-                  className="text-primary font-medium py-2 border-b border-gray-100"
+                  className="text-white font-medium py-3 px-4 rounded-lg hover:bg-white/10 transition-colors border-b border-gray-700"
                 >
                   {link.name}
                 </ScrollLink>
               ))}
-              <a 
+              <a
                 href={`tel:${CLINIC_DETAILS.phone}`}
-                className="flex items-center justify-center gap-2 bg-cta text-white px-4 py-3 rounded-lg font-semibold"
+                className="flex items-center justify-center gap-2 bg-cta text-white px-4 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Phone size={18} />
                 Call Now

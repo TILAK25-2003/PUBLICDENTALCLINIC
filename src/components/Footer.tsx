@@ -14,13 +14,13 @@ export const Footer = () => {
               Providing world-class dental care with a focus on patient comfort and advanced treatments. Your smile is our priority.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cta transition-colors" target="_blank" rel="noreferrer">
+              <a href="#" className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300 transform hover:scale-110" target="_blank" rel="noreferrer">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/public_dental_clinic?utm_source=qr&igsh=MWFobWl6NmcZTHnMA==" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cta transition-colors" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/public_dental_clinic?utm_source=qr&igsh=MWFobWl6NmcZTHnMA==" className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300 transform hover:scale-110" target="_blank" rel="noreferrer">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-cta transition-colors" target="_blank" rel="noreferrer">
+              <a href="#" className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition-all duration-300 transform hover:scale-110" target="_blank" rel="noreferrer">
                 <Twitter size={20} />
               </a>
             </div>
@@ -29,11 +29,11 @@ export const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-bold mb-6 text-accent">Quick Links</h3>
-            <ul className="space-y-3 text-gray-400">
-              <li><a href="#hero" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#doctors" className="hover:text-white transition-colors">Our Doctors</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Treatments</a></li>
-              <li><a href="#appointment" className="hover:text-white transition-colors">Book Appointment</a></li>
+            <ul className="space-y-3 text-gray-300">
+              <li><a href="#hero" className="hover:text-accent transition-colors duration-300">Home</a></li>
+              <li><a href="#doctors" className="hover:text-accent transition-colors duration-300">Our Doctors</a></li>
+              <li><a href="#services" className="hover:text-accent transition-colors duration-300">Treatments</a></li>
+              <li><a href="#appointment" className="hover:text-accent transition-colors duration-300">Book Appointment</a></li>
             </ul>
           </div>
 
@@ -41,13 +41,13 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-accent">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-400">
-                <MapPin className="shrink-0 text-cta mt-1" size={20} />
+              <li className="flex items-start gap-3 text-gray-300">
+                <MapPin className="shrink-0 text-accent mt-1" size={20} />
                 <span>{CLINIC_DETAILS.location}</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="shrink-0 text-cta" size={20} />
-                <a href={`tel:${CLINIC_DETAILS.phone}`} className="hover:text-white transition-colors">
+              <li className="flex items-center gap-3 text-gray-300">
+                <Phone className="shrink-0 text-accent" size={20} />
+                <a href={`tel:${CLINIC_DETAILS.phone}`} className="hover:text-accent transition-colors duration-300">
                   {CLINIC_DETAILS.displayPhone}
                 </a>
               </li>
@@ -55,7 +55,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Public Dental Clinic. All rights reserved.</p>
         </div>
       </div>
