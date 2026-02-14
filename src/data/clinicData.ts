@@ -49,8 +49,8 @@ export const DOCTORS = [
 ];
 
 export const SERVICES = [
-  { name: "Teeth Whitening", icon: Sparkles, description: "Professional bleaching to brighten your smile and remove stains", image: "https://images.unsplash.com/photo-1606811841689-23db76ef1eb3?w=400&h=300&fit=crop" },
-  { name: "Bonding", icon: Gem, description: "Tooth-colored resin applied to repair chips and gaps", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop" },
+  { name: "Teeth Whitening", icon: Sparkles, description: "Professional bleaching to brighten your smile and remove stains", image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2Fc5c38065570743a9b36e1c7d49291283?format=webp&width=800&height=1200" },
+  { name: "Bonding", icon: Gem, description: "Tooth-colored resin applied to repair chips and gaps", image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F09af41763a354c8e97ffdf8ba4b82a82?format=webp&width=800&height=1200" },
   { name: "Check-ups", icon: ShieldCheck, description: "Regular dental exams to detect issues early and maintain oral health", image: "https://images.unsplash.com/photo-1606811841689-23db76ef1eb3?w=400&h=300&fit=crop" },
   { name: "Cosmetic Procedures", icon: Sparkles, description: "Treatments to improve appearance of teeth and smile", image: "https://images.unsplash.com/photo-1606811841689-23db76ef1eb3?w=400&h=300&fit=crop" },
   { name: "Dental Implants", icon: Syringe, description: "Permanent replacement for missing teeth with titanium posts", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop" },
