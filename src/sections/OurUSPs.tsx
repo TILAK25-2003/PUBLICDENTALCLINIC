@@ -66,7 +66,7 @@ export const OurUSPs = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,7 +82,7 @@ export const OurUSPs = () => {
         </motion.div>
 
         {/* USP Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {USPS.map((usp, index) => (
             <motion.div
               key={usp.id}
@@ -90,36 +90,25 @@ export const OurUSPs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -12 }}
+              whileHover={{ y: -6 }}
               className="group"
             >
-              <div className="h-full bg-white rounded-[16px] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-[#D4AF37] flex flex-col">
+              <div className="h-full bg-white rounded-[16px] p-5 shadow-lg hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-[#D4AF37] flex flex-col items-center justify-center text-center">
                 {/* Icon Container */}
                 <motion.div
-                  className="w-16 h-16 rounded-full bg-[#0B1C2D] flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-all duration-300"
+                  className="w-14 h-14 rounded-full bg-[#0B1C2D] flex items-center justify-center mb-4 group-hover:bg-[#D4AF37] transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                 >
                   <usp.icon
-                    size={28}
+                    size={24}
                     className="text-white group-hover:text-[#0B1C2D] transition-colors duration-300"
                   />
                 </motion.div>
 
-                {/* Content */}
-                <h3 className="text-xl md:text-2xl font-bold text-[#0B1C2D] mb-3 font-serif group-hover:text-[#D4AF37] transition-colors duration-300">
+                {/* Content - Title Only */}
+                <h3 className="text-lg font-bold text-[#0B1C2D] font-serif group-hover:text-[#D4AF37] transition-colors duration-300">
                   {usp.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-base flex-grow">
-                  {usp.description}
-                </p>
-
-                {/* Decorative element on hover */}
-                <motion.div
-                  className="mt-4 h-1 w-12 bg-[#D4AF37] rounded-full origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
               </div>
             </motion.div>
           ))}
