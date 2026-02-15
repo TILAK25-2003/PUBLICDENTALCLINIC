@@ -4,6 +4,7 @@ import { Doctors } from './sections/Doctors';
 import { DoctorsDedication } from './sections/DoctorsDedication';
 import { Services } from './sections/Services';
 import { OurUSPs } from './sections/OurUSPs';
+import { CaseStudies } from './sections/CaseStudies';
 import { Reviews } from './sections/Reviews';
 import { Appointment } from './sections/Appointment';
 import { Contact } from './sections/Contact';
@@ -19,6 +20,7 @@ function App() {
       <DoctorsDedication />
       <Services />
       <OurUSPs />
+      <CaseStudies />
       <Reviews />
       <Appointment />
       <Contact />
