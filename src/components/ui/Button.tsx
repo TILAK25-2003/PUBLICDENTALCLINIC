@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={cn(baseStyles, variants[variant], fullWidth && "w-full", className)}
       type={type || 'button'}
       onClick={onClick}
-      {...props}
+      {...(props as any)}
     >
       <span className="relative z-10">{children}</span>
     </motion.button>
