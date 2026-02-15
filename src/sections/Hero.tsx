@@ -1,16 +1,17 @@
 import { motion } from 'framer-motion';
-import { scroller } from 'react-scroll';
 import { Button } from '../components/ui/Button';
 import { CalendarCheck } from 'lucide-react';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
-    scroller.scrollTo(sectionId, {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-      offset: -80,
-    });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
