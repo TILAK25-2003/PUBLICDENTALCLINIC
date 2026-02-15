@@ -11,6 +11,8 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   variant = 'primary',
   fullWidth = false,
+  onClick,
+  type,
   ...props
 }) => {
   const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform active:scale-95 relative overflow-hidden";
@@ -26,8 +28,9 @@ export const Button: React.FC<ButtonProps> = ({
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       className={cn(baseStyles, variants[variant], fullWidth && "w-full", className)}
-      type={props.type || 'button'}
-      {...(props as React.ComponentProps<typeof motion.button>)}
+      type={type || 'button'}
+      onClick={onClick}
+      {...props}
     >
       <span className="relative z-10">{children}</span>
     </motion.button>
