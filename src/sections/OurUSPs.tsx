@@ -12,7 +12,7 @@ interface USP {
   id: number;
   title: string;
   description: string;
-  icon: React.ComponentType<{ size: number; className: string }>;
+  icon: React.ComponentType<any>;
 }
 
 const USPS: USP[] = [
