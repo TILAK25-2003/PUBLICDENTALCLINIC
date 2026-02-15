@@ -33,7 +33,7 @@ export const DOCTORS = [
     qualification: "BDS (Rohtak), MDS (Delhi NCR), A.O.I.P (Spain), M.I.S.P",
     experience: "11+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
-    patients: "5000+",
+    patients: "8000+",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F6a3b04a3b012465a83cea67d375992fa?format=webp&width=800&height=1200"
   },
   {
@@ -43,7 +43,7 @@ export const DOCTORS = [
     qualification: "BDS (Patna), Ex-Resident (Buddha dental college, Patna)",
     experience: "7+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
-    patients: "2500+",
+    patients: "5000+",
     image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F1d5a299fdc314a16b05a81ef0f8f3f92?format=webp&width=800&height=1200"
   }
 ];

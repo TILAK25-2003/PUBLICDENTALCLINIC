@@ -1,17 +1,16 @@
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
 import { CalendarCheck } from 'lucide-react';
+import { scroller } from 'react-scroll';
 
 export const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
+  const handleBookAppointment = () => {
+    scroller.scrollTo('appointment', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -80, // Matches the Navbar offset to handle fixed header
+    });
   };
 
   return (
@@ -34,7 +33,7 @@ export const Hero = () => {
           className="max-w-2xl text-white"
         >
           <div className="inline-block px-5 py-2.5 bg-accent/20 border border-accent backdrop-blur-md rounded-full text-accent text-sm font-semibold mb-8 hover:bg-accent/30 transition-colors">
-            ✓ Trusted by 5000+ Patients
+            ✓ Trusted by 8000+ Patients
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-serif">
@@ -49,7 +48,7 @@ export const Hero = () => {
             <Button
               variant="primary"
               className="w-full sm:w-auto gap-2"
-              onClick={() => scrollToSection('appointment')}
+              onClick={handleBookAppointment}
             >
               <CalendarCheck size={20} />
               Book Appointment
