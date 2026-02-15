@@ -1,11 +1,19 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 import { Button } from '../components/ui/Button';
-import { CalendarCheck, ArrowRight } from 'lucide-react';
-
-const ScrollLink = Link as any;
+import { CalendarCheck } from 'lucide-react';
 
 export const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -38,18 +46,14 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <ScrollLink to="appointment" smooth={true} offset={-80}>
-              <Button variant="primary" className="w-full sm:w-auto gap-2">
-                <CalendarCheck size={20} />
-                Book Appointment
-              </Button>
-            </ScrollLink>
-            <ScrollLink to="services" smooth={true} offset={-80}>
-              <Button variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary gap-2">
-                Our Services
-                <ArrowRight size={20} />
-              </Button>
-            </ScrollLink>
+            <Button
+              variant="primary"
+              className="w-full sm:w-auto gap-2"
+              onClick={() => scrollToSection('appointment')}
+            >
+              <CalendarCheck size={20} />
+              Book Appointment
+            </Button>
           </div>
         </motion.div>
       </div>
