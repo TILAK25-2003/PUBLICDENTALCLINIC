@@ -34,7 +34,7 @@ export const DOCTORS = [
     experience: "11+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
     patients: "8000+",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F6a3b04a3b012465a83cea67d375992fa?format=webp&width=800&height=1200"
+    image: "https://images.dualite.app/c0a7dabd-b4a5-491f-a8a0-1b8ab3c6d039/WhatsApp_Image_2026-02-17_at_11.30.36_AM-00a85a8b-0ca9-4e42-afc9-83d41506ae99.webp"
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const DOCTORS = [
     experience: "7+ Years",
     specialization: "Gum Specialist & Oral Implantologist",
     patients: "5000+",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd3a4464df72a43a692e71a2ce12b099e%2F1d5a299fdc314a16b05a81ef0f8f3f92?format=webp&width=800&height=1200"
+    image: "https://images.dualite.app/c0a7dabd-b4a5-491f-a8a0-1b8ab3c6d039/WhatsApp_Image_2026-02-17_at_11.30.23_AM-2879b3d1-9549-41c2-b317-c0161385d468.webp"
   }
 ];
 
